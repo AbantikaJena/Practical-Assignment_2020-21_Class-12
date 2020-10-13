@@ -4,7 +4,8 @@
 
 # Save information then increase the salary of one
 
-def enter_detail():
+def employee():
+    file = input('Enter file:')
     salary_w = open(file, 'w')
     n = int(input("Enter the no of employee : "))
     for i in range(n):
@@ -13,8 +14,7 @@ def enter_detail():
         Salary = float(input(("Enter salary : ")))
         salary_w.write(str(Empid) + ":" + Name + ":" + str(Salary) + "\n")
     salary_w.close()
-
-def initial_table():
+    
     print('{:^83s}'.format('-:Initial Details:-'))
     print('-' * 70)
     print('| {:^20} | {:^20} | {:^20} |'.format("Empid", "Name", "Salary"))
@@ -27,7 +27,6 @@ def initial_table():
     print('-' * 70)
     salary_r.close()
 
-def changes():
     choice_ask = input("Enter y if want to make changes in salary : ")
     if choice_ask.lower() == "y":
         number_of_changes = int(input("Enter the changes to be done : "))
@@ -47,8 +46,7 @@ def changes():
                 salary_rw.close()
         else:
             print("Not enough data !!!")
-
-def final_table():
+            
     print('{:^83s}'.format('-:Updated Details:-'))
     print('-' * 70)
     print('| {:^20} | {:^20} | {:^20} |'.format("Empid", "Name", "Salary"))
@@ -63,12 +61,5 @@ def final_table():
         count += 1
     print('-' * 70)
     salary_r.close()
-
-def employee():
-    file = input('Enter file:')
-    enter_detail()
-    initial_table()
-    changes()
-    final_table()
 
 employee()
