@@ -4,7 +4,7 @@
 
 # Display the number of vowels / consonants /uppercase/ lowercase characters.
 
-def characters()
+def characters():
     file = input('Enter file:')
     search_file = open(file, 'r')
     vowel_list = ["a", "e", "i", "o", "u"]
