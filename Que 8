@@ -1,0 +1,40 @@
+# Que 8
+
+# Create a module lengthconversion.py that stores functions for various length conversion e.g.,
+# *miletokm() to convert miles to kilometer
+# *kmtomile() to convert kilometers to mile
+# *feettoinches()
+# *inchestofeet()
+# it should also store constant values such as value of (mile in kilometer and vice versa).[1 mile=1.609344 kilometer;1 feet=12 inches]
+# Help() function should display proper information.
+
+####################################################################################
+
+# lengthconversion.py
+
+# conversion funtion between the lengths
+
+# Funtions
+
+def miletokm(x):
+    '''Returns : x miles to kilometer'''
+    return x*1.609344
+
+def kmtomile(x):
+    '''Return : x kilometer to miles'''
+    return x/1.609344
+
+def feettoinches(x):
+    '''Return : x feets to inches'''
+    return x*12
+
+def inchestofeet(x):
+    '''Retun : x inches to feets'''
+    return x/12
+def Help():
+    print("1 mile = 1.609344 km", "\n",
+          "1 feet = 12 inches","\n",
+          "miletokm(x) - Returns : x miles to kilometer","\n",
+          "kmtomile(x) - Return : x kilometer to miles","\n",
+          "feettoinches(x) - Return : x feets to inches","\n",
+          "inchestofeet(x) - Retun : x inches to feets")
