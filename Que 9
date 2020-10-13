@@ -1,0 +1,43 @@
+# Que 9
+
+# Create a module massconversion.py that stores functions for various mass
+#  conversion e.g.,
+#  *kgtoton() to convert kg to tonnes
+#  *tonnetokg() to convert ton to kg
+#  *kgtopound() to convert kg to pound
+#  *poundtokg() to convert pound to kg
+#  it should also store constant values such as value of
+#  [1 kg=0.001 tonne, kilometer;1 kg=2.20462 pound]
+#  Help() function should display proper information.
+
+######################################################################
+
+# massconversion.py
+
+# Convertion function between the masses
+
+# Funtions
+
+def kgtoton(x):
+    '''Return : x kilogram to tonn'''
+    return x*0.001
+
+def tonntokg(x):
+    '''Return : x tonn to kilogram'''
+    return x/0.001
+
+def kgtopound(x):
+    '''Return : x kilogram to pound'''
+    return x*2.20462
+
+def poundtokg(x):
+    '''Return : x pound to kilogram'''
+    return x / 2.20462
+
+def Help():
+    print("1 kg = 0.001 tonn", "\n",
+          "1 kg = 2.20462 pound","\n",
+          "kgtoton(x) - Return : x kilogram to tonn","\n",
+          "tonntokg(x) - Return : x tonn to kilogram","\n",
+          "kgtopound(x) - Return : x kilogram to pound","\n",
+          "poundtokg(x) - Return : x pound to kilogram")
