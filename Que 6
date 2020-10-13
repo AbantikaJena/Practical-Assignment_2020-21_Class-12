@@ -1,0 +1,18 @@
+# Que 6
+
+# Write a python program using user defined function which accepts a hyphenseparated sequence of words as input and prints the words in a hyphen-separated sequence after sorting them alphabetically.
+
+# Sort alphabitacal word seperated by hyphen.
+
+items = input("Enter the values : ")
+List = items.split('-')
+
+def bubbleSort(a):
+    n = len(a)
+    for i in range(n - 1):
+        for j in range(0, n - i - 1):
+            if a[j] > a[j + 1]:
+                a[j], a[j + 1] = a[j + 1], a[j]
+
+bubbleSort(List)
+print("Answer : ", '-'.join(List))
