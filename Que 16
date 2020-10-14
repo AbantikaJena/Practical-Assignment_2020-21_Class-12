@@ -1,0 +1,29 @@
+# Que 16
+
+# Write a function Binary_search() to search an element Item in the given list and display a suitable message.
+
+# Binary_search() to search an element display a suitable message.
+
+def Binary_search(a,searchval):
+    for i in range(len(a) - 1):
+        for j in range(0, len(a) - i - 1):
+            if a[j] > a[j + 1]:
+                a[j], a[j + 1] = a[j + 1], a[j]
+    print("Sorted list : ",a)
+    low = 0
+    pos = None
+    high = len(a) - 1
+    while low <= high:
+        mid = (high + low) // 2
+        if a[mid] == searchval:
+            pos = mid
+            print("Index of",searchval," : ",pos)
+        elif searchval < a[mid]:
+            high = mid - 1
+        else:
+            low = mid + 1
+    print("Index of",searchval," : ",pos)
+
+List = eval(input("Enter list of elements : "))
+element = int(input("Enter element to find index : "))
+print(Binary_search(List,element))
