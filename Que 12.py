@@ -2,8 +2,7 @@
 
 # Write a program to accept employee’s name and his basic salary of any five employees and store in a file EMP.TXT and print the given output:
 #  SALARY REGISTER
-# S.No. Name Basic DA HRA Total PF
-# Net-pay
+# S.No. Name Basic DA HRA Total PF Net-pay
 
 # Accept employee’s name and his basic salary and show other details.
 
