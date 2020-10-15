@@ -1,0 +1,5 @@
+Avi:Chenab:100.0
+Ayush:Yamuna:200.0
+Aditi:Kaveri:400.0
+Ravi:Narmada:450.0
+Radha:Jhelum:350.0
