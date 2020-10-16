@@ -21,16 +21,21 @@ def Amount_Collected():
             quit()
     student_w.close()
 
+    House_Name = input("Enter House name : ")
     print('{:^83s}'.format('-:Students\' Details:-'))
     print('-'*70)
     print('| {:^20} | {:^20} | {:^20} |'.format("Name of student", "House", "Amount Collected"))
     print('-'*70)
 
+    Total_Amount = 0
     student_r = open(file)
     for i in student_r.readlines():
         j = i.rstrip("\n").split(":")
-        print('| {:^20} | {:^20} | {:^20} |'.format(j[0], j[1], j[2]))
+        if House_Name == j[1]:
+            print('| {:^20} | {:^20} | {:^20} |'.format(j[0], j[1], j[2]))
+            Total_Amount += float(j[2])
     print('-' * 70)
+    print("Total Amount collected by", House_Name, ": ", Total_Amount)
     student_r.close()
 
 Amount_Collected()
