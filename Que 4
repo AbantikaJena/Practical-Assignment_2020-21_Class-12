@@ -9,8 +9,8 @@
 import csv
 itrec = []
 file = input("File enter : ")
-fh = open(file, "w")
-itwriter = csv.writer(fh)
+fh = open(file, "w", newline='')
+itwriter = csv.writer(fh, delimiter = '#')
 itwriter.writerow(['Item_Name', 'Quantity', 'Unit_Price', 'Total_Price'])
 n = int(input("No of item : "))
 for i in range(n):
@@ -22,3 +22,11 @@ for i in range(n):
     iterec = [Item_Name, Qty, price, Total]
     itwriter.writerow(iterec)
 fh.close()
+
+import csv
+with open(file, "r") as fh :
+    ireader = csv.reader(fh)
+    print("File", file, "contains : ")
+    for row in ireader:
+        print(row, '\t')
+
