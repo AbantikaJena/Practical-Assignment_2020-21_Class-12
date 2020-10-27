@@ -7,10 +7,10 @@
 import mysql.connector
 mydb= mysql.connector.connect(host ="localhost",user="root",passwd="Mars 1507",database= "Pra_Exam_Ques")
 mycursor = mydb.cursor()
-mycursor.execute("CREATE TABLE Que21(Admno char(8) , Name Varchar(15), Marks integer)")
-mycursor.execute("INSERT INTO Que21 VALUES('A1','AVI',100),('A2','AYUSH',95),('A3','ADITI',98),('A4','RAVI',85),('A5','RADHA',99)")
+mycursor.execute("CREATE TABLE Fees(Admno char(8) , Name Varchar(15), Fees_paid integer)")
+mycursor.execute("INSERT INTO Fees VALUES('A1','AVI',100),('A2','AYUSH',95),('A3','ADITI',98),('A4','RAVI',85),('A5','RADHA',99)")
 def display():
-    mycursor.execute("select * from Que21")
+    mycursor.execute("select * from Fees")
     myrecords = mycursor.fetchall()
     for x in myrecords:
         print(x)
