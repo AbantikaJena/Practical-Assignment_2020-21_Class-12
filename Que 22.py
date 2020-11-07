@@ -12,6 +12,7 @@ mycursor.execute("INSERT INTO Que22 VALUES('A1',1000),('A2',2000),('A3',3000),('
 def update_data():
     mycursor.execute("UPDATE Que22 SET Price = Price + Price*(10/100)")
 update_data()
+mydb.commit()
 mycursor.execute("select * from Que22")
 myrecords = mycursor.fetchall()
 for x in myrecords:
