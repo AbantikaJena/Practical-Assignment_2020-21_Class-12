@@ -23,7 +23,7 @@ def display(s):
 def mainfun():
     s = []
     choice = 1
-    while (choice != 3):
+    while (choice != 4):
         print("1.PUSH")
         print("2.POP")
         print("3.DISPLAY")
@@ -35,7 +35,8 @@ def mainfun():
             pop(s)
         elif (int(choice) == 3):
             display(s)
-        elif (int(choice) == 3):
+            print()
+        elif (int(choice) == 4):
             print("Task Done!!!")
             quit()
         else:
