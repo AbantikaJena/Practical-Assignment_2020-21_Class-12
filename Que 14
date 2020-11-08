@@ -18,12 +18,12 @@ def pop(s):
 def display(s):
     l = len(s)
     for i in range(l - 1, -1, -1):  # to display last element to the first
-        print(s[i])
+        print(s[i],end="  ")
 
 def mainfun():
     s = []
-    c = "y"
-    while (c == "y"):
+    choice = 1
+    while (choice != 3):
         print("1.PUSH")
         print("2.POP")
         print("3.DISPLAY")
@@ -40,6 +40,5 @@ def mainfun():
             quit()
         else:
             print("wrong choice")
-        c = input("Do you want to continue or not : ")
 
 mainfun()
