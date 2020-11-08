@@ -5,19 +5,19 @@
 # implementation of stack using list
 
 def push(s):
-    a = input("Enter any book")
+    a = input("Enter any book : ")
     s.append(a)
 
 def pop(s):
     if (s == []):
-        print("Stack is empty")
+        print("Stack is empty!")
     else:
         s.pop()
 
 def display(s):
     l = len(s)
     for i in range(l - 1, -1, -1):  # to display last element to the first
-        print(s[i])
+        print(s[i], end=",")
 
 def mainfun():
     s = []
@@ -38,6 +38,6 @@ def mainfun():
             print("Task Done!!!")
             quit()
         else:
-            print("wrong choice")
+            print("wrong choice!")
 
 mainfun()
