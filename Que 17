@@ -18,7 +18,7 @@ def display(s):
     l = len(s)
     for i in range(l - 1, -1, -1):  # to display last element to the first
         print(s[i], end=",")
-        print()
+    print()
 
 def mainfun():
     s = []
