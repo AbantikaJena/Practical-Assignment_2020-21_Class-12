@@ -21,7 +21,7 @@ def find():
     student_r = open(file)
     ask = input("If you want to search for phone no y : ")
     ask_l = []
-    if ask.lower() == "y":
+    while ask.lower() == "y":
         find = input("Enter name : ")
         for i in student_r.readlines():
             k = i.rstrip('\n').split(':')
@@ -33,3 +33,4 @@ def find():
     student_r.close()
     print("Task done!!!")
 find()
+
