@@ -30,6 +30,7 @@ def find():
                 ask_l.append(k[1])
         if len(ask_l)==0:
             print("Not found in the directory")
+        ask = input("If you want to search for phone no y : ")
     student_r.close()
     print("Task done!!!")
 find()
