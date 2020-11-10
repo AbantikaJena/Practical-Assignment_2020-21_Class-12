@@ -2,7 +2,7 @@
 
 # Write push() and pop() methods to add a book and to remove book from the queue having list of books. Design a menu also.
 
-# implementation of stack using list
+# implementation of queue using list
 
 def push(s):
     a = input("Enter any book : ")
@@ -12,11 +12,11 @@ def pop(s):
     if (s == []):
         print("Stack is empty!")
     else:
-        s.pop()
+        print("Deleted element is :", s.pop(0))
 
 def display(s):
     l = len(s)
-    for i in range(l - 1, -1, -1):  # to display last element to the first
+    for i in range(0,l):  # to display last element to the first
         print(s[i], end=",")
     print()
 
@@ -24,8 +24,8 @@ def mainfun():
     s = []
     choice = 1
     while (choice != 4):
-        print("1.PUSH")
-        print("2.POP")
+        print("1.INSERT")
+        print("2.DELETE")
         print("3.DISPLAY")
         print("4.QUIT")
         choice = input("Enter your choice : ")
