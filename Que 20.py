@@ -20,7 +20,7 @@ def common_word():
     counts = dict()
     n = 1
     for line in email_r:
-        if n > 4:
+        if n > 10:
             words = line.split()
             for word in words:
                 word_l = word.lower()
