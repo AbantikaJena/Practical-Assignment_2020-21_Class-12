@@ -1,0 +1,45 @@
+# Que 14
+
+# Write a program to access element of STACK using given menu:
+# 1. Push 2. Pop 3. View stack contents 4. Quit
+
+# To access element of STACK using menu.
+
+def push(s):
+    a = input("Enter any element : ")
+    s.append(a)
+
+def pop(s):
+    if (s == []):
+        print("Stack is empty : ")
+    else:
+        s.pop()
+
+def display(s):
+    l = len(s)
+    for i in range(l - 1, -1, -1):  # to display last element to the first
+        print(s[i],end="  ")
+
+def mainfun():
+    s = []
+    choice = 1
+    while (choice != 4):
+        print("1.PUSH")
+        print("2.POP")
+        print("3.DISPLAY")
+        print("4.QUIT")
+        choice = input("Enter your choice : ")
+        if (int(choice) == 1):
+            push(s)
+        elif (int(choice) == 2):
+            pop(s)
+        elif (int(choice) == 3):
+            display(s)
+            print()
+        elif (int(choice) == 4):
+            print("Task Done!!!")
+            quit()
+        else:
+            print("wrong choice")
+
+mainfun()
