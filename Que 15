@@ -1,0 +1,20 @@
+# que 15
+
+# Write a program to store any 10 integers in random order then write a sort() function to sort the data in ascending order and print the content of an array.
+
+# Sort 10 integer in ascending order.
+
+n = int(input("Enter the no of integers to be sorted :"))
+l = []
+for i in range(n):
+    l.append(int(input("Enter the integer : ")))
+
+def sort(a):
+    n = len(a)
+    for i in range(n - 1):
+        for j in range(0, n - i - 1):
+            if a[j] > a[j + 1]:
+                a[j], a[j + 1] = a[j + 1], a[j]
+
+sort(l)
+print("Elements in the list are in ascending order : ", l)
