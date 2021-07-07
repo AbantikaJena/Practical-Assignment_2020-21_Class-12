@@ -1,0 +1,32 @@
+# Que 7
+
+# Write a function that takes amount-in-dollars and dollar-to-rupee conversion print it then returns the amount converted to rupees. Create the function in both void and non-void forms.
+
+# convert dollar-to-rupee visa-versa in both void and non-void.
+
+def amount_in_dollars():
+    def nonvoid():  # Nonvoid
+        conversion = rs/dr_r
+        return conversion
+    def Void():  # Void
+        conversion = rs/dr_r
+        print("Conversion rupees to dollor (Void) : ", conversion)
+    print("Conversion rupees to dollor (Non-Void) : ", nonvoid())
+    Void()
+
+def dollar_to_rupee():
+    def nonvoid():  # Nonvoid
+        conversion = dr * dr_r
+        return conversion
+    def Void():  # Void
+        conversion = dr * dr_r
+        print("Conversion dollor to rupees (Void) : ", conversion)
+    print("Conversion dollor to rupees (Non-Void) : ", nonvoid())
+    Void()
+
+rs = float(input("Enter rupees to contvert into dollor : "))
+dr_r = float(input("Enter 1 dollor is equal to how many rupees : "))
+amount_in_dollars()
+
+dr = float(input("Enter dollor to contvert into rupees : "))
+dollar_to_rupee()
